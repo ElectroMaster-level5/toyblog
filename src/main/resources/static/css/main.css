@@ -1,0 +1,95 @@
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+.navbar-inverse{
+    min-width: 320px;
+}
+
+
+.nav-item {
+    color: #ffffff;
+}
+.navbar {
+    background-color: #000000;
+}
+
+.navbar-dark .navbar-nav .nav-link  {
+    color: #7b7b7b;
+    word-wrap: break-word;
+
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: #ffffff;
+    text-decoration: none;
+    outline: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link:before,
+.navbar-dark .navbar-nav .nav-link:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+.page-footer {
+    background-color: #2f2f2f;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.page-footer p {
+    color: #ffffff;
+}
+
+.page-footer h4 {
+    color: #ffffff;
+    text-transform: uppercase;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+.page-footer h4 > a{
+    color: #ffffff;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.footer-tags{
+    width: 400px;
+    margin: 0 auto;
+}
+.footer-tags a{
+    color: #1abc9c;
+    border: 1px solid #1abc9c;
+    padding: 4px 10px;
+    line-height: 2.4;
+    font-size: 13px;
+    text-transform: capitalize;
+}
+.footer-tags a:hover{
+    color: #fff;
+    text-decoration: none;
+    background: #0aac8e;
+    border: 1px solid #0aac8e;
+}
+.friend-link {
+    margin: 10px auto;
+    display: block;
+}
+.friend-link a {
+    color: #b3b7bb;
+}
+
+.friend-link a:hover {
+    color: #f7f7f7;
+    font-weight: 700;
+    text-decoration: none;
+}

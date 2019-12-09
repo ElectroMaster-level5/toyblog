@@ -1,9 +1,99 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <!DOCTYPE html>
-<html>
 <head>
-    <title>test</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>TOY BLOG</title>
+    <link rel="stylesheet" th:href="@{vendor/bootstrap-4.4.1/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{vendor/fontawesome-5.11.2/css/fontawesome.css}">
+    <link rel="stylesheet" th:href="@{css/main.css}">
+    <script type="text/javascript" th:src="@{/js/jquery-3.4.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/vendor/bootstrap-4.4.1/js/bootstrap.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery.validate.min.js}"></script>
+    <script th:src="@{/js/messages_zh.js}"></script>
+
+    <!--[if lt IE 9]>
+    <script th:src="@{/js/html5shiv.js}"></script>
+    <script th:src="@{/js/respond.min.js}"></script>
+    <![endif]-->
 </head>
 <body>
-Hello world
+
+<nav class="navbar navbar-expand-lg navbar-dark navbar-inverse">
+    <a class="navbar-brand" href="#">TOY BLOG</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/index}">首页</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/blog}">博客</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/search}">搜索</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/about}">关于</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/contact}">联系</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+<footer class="page-footer">
+
+    <!-- Footer Links -->
+    <div class="text-center">
+
+        <!-- Grid row -->
+        <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-lg-4">
+                <h4><a th:href="@{/tag}">标签</a></h4>
+                <div class="footer-tags">
+                    <span><a href="#">SpringBoot</a></span>
+                    <span><a href="#">SpringCloud</a></span>
+                    <span><a href="#">Ngnix</a></span>
+                    <span><a href="#">Mybatis</a></span>
+                    <span><a href="#">Mybatis</a></span>
+                    <span><a href="#">Mybatis</a></span>
+                    <span><a href="#">Mybatis</a></span>
+                    <span><a href="#">Mybatis</a></span>
+                </div>
+            </div>
+            <!-- Grid column -->
+            <div class="col-lg-4">
+                <h4>友情链接</h4>
+                <p>
+                    <span class="friend-link"><a href="#">CSDN</a></span>
+                    <span class="friend-link"><a href="#">简书</a></span>
+                    <span class="friend-link"><a href="#">慕课网</a></span>
+                </p>
+            </div>
+            <!-- Grid column -->
+            <div class="col-lg-4">
+                <h4>关于网站</h4>
+                <p>Copyright @ 2019. MoonRabbit.com</p>
+                <p>All rights reserved</p>
+                <p>备案号：12494123516</p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
