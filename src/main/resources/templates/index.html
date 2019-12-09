@@ -10,11 +10,12 @@
     <link rel="stylesheet" th:href="@{vendor/bootstrap-4.4.1/css/bootstrap.css}">
     <link rel="stylesheet" th:href="@{vendor/fontawesome-5.11.2/css/fontawesome.css}">
     <link rel="stylesheet" th:href="@{css/main.css}">
-    <script type="text/javascript" th:src="@{/js/jquery-3.4.1.min.js}"></script>
-    <script type="text/javascript" th:src="@{/vendor/bootstrap-4.4.1/js/bootstrap.js}"></script>
-    <script type="text/javascript" th:src="@{/js/jquery.validate.min.js}"></script>
-    <script th:src="@{/js/messages_zh.js}"></script>
 
+    <script type="text/javascript" th:src="@{/vendor/bootstrap-4.4.1/js/bootstrap.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery-3.4.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery.validate.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/messages_zh.js}"></script>
+    <script th:src="@{/js/main.js}"></script>
     <!--[if lt IE 9]>
     <script th:src="@{/js/html5shiv.js}"></script>
     <script th:src="@{/js/respond.min.js}"></script>
@@ -50,7 +51,25 @@
 </nav>
 
 
+<div class="container ptb">
+    <div class="row mtb">
+        <div class="col-lg-4 centered">
+            <a th:href="@{/index}">
+                <div class="responsive-img-container">
+                    <img th:src="@{/img/portfolio/port02.jpg}" alt="Avatar" class="coveredImg">
+                    <div class="overlay">
+                        <img th:src="@{/img/zoom.png}" alt="Avatar" class="overlayIcon">
+                    </div>
+                </div>
+            </a>
 
+            <p>TextHolder</p>
+        </div>
+
+
+
+    </div>
+</div>
 
 <footer class="page-footer">
 
