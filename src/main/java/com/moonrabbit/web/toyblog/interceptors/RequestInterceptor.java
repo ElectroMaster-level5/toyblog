@@ -44,9 +44,12 @@ public class RequestInterceptor extends HandlerInterceptorAdapter {
             websiteAccessService.save(websiteAccess);
 
             logger.info("加入底部数据。");
-            //标签列表
+            // 标签列表
             modelMap.addAttribute("tagList", tagService.findAll());
-
+            // 友情链接列表
+            modelMap.addAttribute("linkList", linkService.findAllByIsEnable());
+            // 网站基本信息
+            modelMap.addAttribute("websiteConfig", websiteConfigService.findWebsiteConfig());
         }
     }
 }

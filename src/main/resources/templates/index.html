@@ -24,7 +24,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark navbar-inverse">
-    <a class="navbar-brand" href="#">TOY BLOG</a>
+    <a class="navbar-brand" th:href="@{/index}">TOY BLOG</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,21 +53,18 @@
 
 <div class="container ptb">
     <div class="row mtb">
-        <div class="col-lg-4 centered">
-            <a th:href="@{/index}">
+        <div class="col-lg-4 centered" th:each="item, iterStat : ${articleList}">
+            <a th:href="${'/article/'+item.articleId}">
                 <div class="responsive-img-container">
-                    <img th:src="@{/img/portfolio/port02.jpg}" alt="Avatar" class="coveredImg">
+                    <img th:src="${'/img/portfolio/port0'+item.imageNo+'.jpg'}" alt="Avatar" class="coveredImg">
                     <div class="overlay">
                         <img th:src="@{/img/zoom.png}" alt="Avatar" class="overlayIcon">
                     </div>
                 </div>
             </a>
 
-            <p>TextHolder</p>
+            <p th:text="${item.articleName}"></p>
         </div>
-
-
-
     </div>
 </div>
 
@@ -83,31 +80,28 @@
             <div class="col-lg-4">
                 <h4><a th:href="@{/tag}">标签</a></h4>
                 <div class="footer-tags">
-                    <span><a href="#">SpringBoot</a></span>
-                    <span><a href="#">SpringCloud</a></span>
-                    <span><a href="#">Ngnix</a></span>
-                    <span><a href="#">Mybatis</a></span>
-                    <span><a href="#">Mybatis</a></span>
-                    <span><a href="#">Mybatis</a></span>
-                    <span><a href="#">Mybatis</a></span>
-                    <span><a href="#">Mybatis</a></span>
+<!--                    <span><a href="#">SpringBoot</a></span>-->
+                    <span th:each="item, iterStat : ${tagList}">
+                        <a target="_blank" th:href="${'/tag/'+item.tagName}" th:text="${item.tagName}"></a>
+                    </span>
                 </div>
             </div>
             <!-- Grid column -->
             <div class="col-lg-4">
                 <h4>友情链接</h4>
                 <p>
-                    <span class="friend-link"><a href="#">CSDN</a></span>
-                    <span class="friend-link"><a href="#">简书</a></span>
-                    <span class="friend-link"><a href="#">慕课网</a></span>
+<!--                    <span class="friend-link"><a href="#">GITHUB</a></span>-->
+                    <span class="friend-link" th:each="item, iterStat : ${linkList}">
+                        <a target="_blank" th:href="${item.linkUrl}" th:text="${item.linkName}" th:title="${item.remark}"></a>
+                    </span>
                 </p>
             </div>
             <!-- Grid column -->
             <div class="col-lg-4">
                 <h4>关于网站</h4>
-                <p>Copyright @ 2019. MoonRabbit.com</p>
+                <p>Copyright @ 2019. <span th:text="${websiteConfig.domainName}"></span></p>
                 <p>All rights reserved</p>
-                <p>备案号：12494123516</p>
+                <p>备案号：<span th:text="${websiteConfig.recordNumber}"></span></p>
             </div>
 
         </div>
