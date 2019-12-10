@@ -5,9 +5,11 @@ import com.moonrabbit.web.toyblog.repository.WebsiteConfigRepository;
 import com.moonrabbit.web.toyblog.service.WebsiteConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+@Service
 public class WebsiteConfigServiceImpl implements WebsiteConfigService {
 
     @Autowired
