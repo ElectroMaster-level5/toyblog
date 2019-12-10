@@ -7,11 +7,13 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 // @Table当实体类名称与数据库表明不同时使用
-// 注意@Table要和@Entity一起使用，且@Table必须在Entity之前
-@Table(name="article")
+// 注意@Table要和@Entity一起使用
+
 @Entity
+@Table(name="article")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -48,6 +50,9 @@ public class Article implements Serializable {
     private Integer isEnable;
 
     // 外键信息
+    @ManyToMany
+    @JoinTable(name = "articleTag", joinColumns = {@JoinColumn(name = "articleId")}, inverseJoinColumns = {@JoinColumn(name = "tagId")})
+    private List<Tag> tagList;
 
     // 项目内使用的字段，非数据库字段
     @Transient

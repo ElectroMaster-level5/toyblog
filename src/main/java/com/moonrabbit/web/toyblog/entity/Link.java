@@ -7,8 +7,9 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Table(name = "link")
+
 @Entity
+@Table(name = "link")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
