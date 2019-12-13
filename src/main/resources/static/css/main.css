@@ -12,7 +12,10 @@ body{
     min-width: 320px;
 }
 
-
+a.navbar-brand{
+    font-weight: 400;
+    font-size: 24px;
+}
 .nav-item {
     color: #ffffff;
     font-size: 17px;

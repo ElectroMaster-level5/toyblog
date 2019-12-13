@@ -25,7 +25,7 @@ public class WebsiteConfig implements Serializable {
     // 作者名字
     private String authorName;
 
-    // unknown, maybe useless
+    // about页的文章id，用于about页的展示
     private Long aboutPageArticleId;
 
     // 备案号

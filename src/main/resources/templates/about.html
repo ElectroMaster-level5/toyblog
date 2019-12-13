@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:include="common/common_head::commonHeader"></head>
+<head><link rel="stylesheet" th:href="@{/css/about.css}"></head>
+<body>
+
+<div th:include="common/common_navigation::commonNav"></div>
+
+<div id="white_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <img class="user_picture" th:src="@{img/user.png}" alt="user_picture">
+                <h1 class="centered" th:text="${article.articleName}"></h1>
+                <div class="centered" th:utext="${article.articleShowContent}"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:include="common/common_foot::commonFooter"></div>
+
+</body>
+</html>
