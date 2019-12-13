@@ -4,7 +4,29 @@
 
 <div th:include="common/common_navigation::commonNav"></div>
 
-
+<div id="white_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <p><img th:src="@{/img/user.png}" width="50px" height="50px"><span th:text="${article.articleAuthors}"></span></p>
+                <p>
+                    <i class="fa fa-clock-o"></i><a th:text="${article.articleInputDate}"></a>
+                    <i class="fa fa-eye"></i><a th:text="${article.articleReadingTime}"></a>
+                </p>
+                <h4 th:text="${article.articleName}"></h4>
+<!--                utext会解析字符串中的html效果-->
+                <div th:utext="${article.articleShowContent}" style="overflow:hidden"></div>
+                <p>标签:
+                    <span th:each="item,iterStat : ${article.tagList}">
+                        <i class="fa fa-tag"></i><a class="cyan_link" target="_blank" th:href="${'/tag/'+item.tagName}" th:text="${item.tagName}"></a>
+                    </span>
+                </p>
+                <hr>
+                <p><a class="cyan_link" th:href="@{/blog}"># 返回博客列表</a></p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div th:include="common/common_foot::commonFooter"></div>
 

@@ -153,3 +153,33 @@ body{
     text-decoration: none;
     color: black;
 }
+
+/*article.css*/
+#white_bg {
+    margin: 60px auto;
+}
+
+a.cyan_link {
+    color: #1abc9c;
+    word-wrap: break-word;
+
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+a.cyan_link:hover,
+a.cyan_link:focus{
+    color: #7b7b7b;
+    text-decoration: none;
+    outline: 0;
+}
+a.cyan_link:before,
+a.cyan_link:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
