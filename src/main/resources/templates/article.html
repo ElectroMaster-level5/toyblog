@@ -4,7 +4,7 @@
 
 <div th:include="common/common_navigation::commonNav"></div>
 
-<div id="white_bg">
+<div class="white_bg">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
@@ -16,7 +16,7 @@
                 <h4 th:text="${article.articleName}"></h4>
 <!--                utext会解析字符串中的html效果-->
                 <div th:utext="${article.articleShowContent}" style="overflow:hidden"></div>
-                <p>标签:
+                <p><span class="tag_head">标签：</span>
                     <span th:each="item,iterStat : ${article.tagList}">
                         <i class="fa fa-tag"></i><a class="cyan_link" target="_blank" th:href="${'/tag/'+item.tagName}" th:text="${item.tagName}"></a>
                     </span>

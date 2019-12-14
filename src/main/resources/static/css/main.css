@@ -158,8 +158,24 @@ a.navbar-brand{
 }
 
 /*article.css*/
-#white_bg {
+.white_bg {
     margin: 60px auto;
+}
+
+.white_bg h1{
+    font-weight: 700;
+}
+.white_bg h2{
+    font-weight: 700;
+}
+.white_bg h3{
+    font-weight: 700;
+}
+.white_bg h4{
+    font-weight: 700;
+}
+.white_bg h5{
+    font-weight: 700;
 }
 
 a.cyan_link {
@@ -185,4 +201,10 @@ a.cyan_link:after {
     -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
     -o-transition: color 0.1s ease-in, background 0.1s ease-in;
     transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+.tag_head{
+    color: #0aac8e;
+    font-weight: 700;
+    font-size:16px;
 }
