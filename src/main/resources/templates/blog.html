@@ -17,8 +17,8 @@
                 <!--                utext会解析字符串中的html效果-->
                 <div th:text="${item.articleIntroduction}"></div>
                 <p><span class="tag_head">标签：</span>
-                    <span th:each="item,iterStat : ${item.tagList}">
-                        <i class="fa fa-tag"></i><a class="cyan_link" target="_blank" th:href="${'/tag/'+item.tagName}" th:text="${item.tagName}"></a>
+                    <span th:each="it,iterStat : ${item.tagList}">
+                        <i class="fa fa-tag"></i><a class="cyan_link" target="_blank" th:href="${'/tag/'+it.tagName}" th:text="${it.tagName}"></a>
                     </span>
                 </p>
                 <hr>
