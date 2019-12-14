@@ -92,6 +92,25 @@ a.navbar-brand{
     background: #0aac8e;
     border: 1px solid #0aac8e;
 }
+
+.page-tags{
+    width: 400px;
+    margin: 0 auto;
+}
+.page-tags a{
+    color: #1abc9c;
+    padding: 4px 10px;
+    line-height: 2.4;
+    font-size: 18px;
+    font-weight:700;
+    text-transform: capitalize;
+}
+.page-tags a:hover{
+    color: #7b7b7b;
+    text-decoration: none;
+}
+
+
 .friend-link {
     margin: 10px auto;
     display: block;

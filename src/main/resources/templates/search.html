@@ -1,0 +1,94 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:include="common/common_head::commonHeader"></head>
+<body>
+
+<div th:include="common/common_navigation::commonNav"></div>
+
+<div class="white_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+<!--        不要添加form标签，否则会覆盖掉js中的keydown方法， 导致搜索无法完成-->
+                    <div class="form-group row">
+                        <div style="width: 80%;padding-right: 40px;">
+                            <input type="text" class="form-control" id="keyword" placeholder="搜索从这里开始" th:value="${keyword}">
+                        </div>
+                        <div style="width: 20%;">
+                            <button type="button" class="btn btn-success" onclick="search()">Search</button>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container" th:each="item,iterStat : ${articleList}">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <p><img th:src="@{/img/user.png}" width="50px" height="50px"><span th:text="${item.articleAuthors}"></span></p>
+                <p>
+                    <i class="fa fa-clock-o"></i><a th:text="${item.articleInputDate}"></a>
+                    <i class="fa fa-eye"></i><a th:text="${item.articleReadingTime}"></a>
+                </p>
+                <h4 th:text="${item.articleName}"></h4>
+                <!--                utext会解析字符串中的html效果-->
+                <div th:text="${item.articleIntroduction}"></div>
+                <p><span class="tag_head">标签：</span>
+                    <span th:each="it,iterStat : ${item.tagList}">
+                        <i class="fa fa-tag"></i><a class="cyan_link" target="_blank" th:href="${'/tag/'+it.tagName}" th:text="${it.tagName}"></a>
+                    </span>
+                </p>
+                <hr>
+                <p><a class="cyan_link" th:href="${'/article/'+item.articleId}">查看详情 ...</a></p>
+            </div>
+        </div>
+    </div>
+    <!--    page part-->
+    <div class="container" style="margin-bottom:60px;" id="page_on">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div>
+                    <ul class="page" th:maxshowpageitem="${maxShowPageItem}" th:pagelistcount="${pageListCount}"  id="page"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<div th:include="common/common_foot::commonFooter"></div>
+
+</body>
+<script type="text/javascript"  th:inline="javascript">
+    function search(){
+        var keywordInput = $('#keyword').val();
+        window.location.href=getRootPath_dc()+"search?keyword="+keywordInput;
+    }
+
+
+    var totalCount =  [[${totalCount}]];
+    var pageNumber =  [[${pageNumber}]];
+    var keyword = [[${keyword}]];
+    var pagelistcount = [[${pageListCount}]];
+    var GG = {
+        "kk":function(mm){
+            var keywordInput = $('#keyword').val();
+            window.location.href=getRootPath_dc()+"search?keyword="+keywordInput+"&pageNumber="+mm;
+        }
+    }
+    $("#page").initPage(totalCount,pageNumber,GG.kk);
+    if(!keyword || totalCount<=pagelistcount){
+        $("#page_on").hide();
+    }
+
+    $('#keyword').keydown(function(event){
+
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if(keycode == '13'){
+            search();
+        }
+
+    });
+</script>
+</html>

@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:include="common/common_head::commonHeader"></head>
+<body>
+
+<div th:include="common/common_navigation::commonNav"></div>
+<head>
+    <script th:src="@{/js/contact.js}"></script>
+</head>
+<div class="white_bg">
+    <div class="text-center container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <h3>标签列表</h3>
+                <hr>
+                <div class="page-tags">
+                    <!--                    <span><a href="#">SpringBoot</a></span>-->
+                    <span th:each="item, iterStat : ${tagList}">
+                        <a target="_blank" th:href="${'/tag/'+item.tagName}" th:text="${item.tagName}"></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:include="common/common_foot::commonFooter"></div>
+
+</body>
+</html>
