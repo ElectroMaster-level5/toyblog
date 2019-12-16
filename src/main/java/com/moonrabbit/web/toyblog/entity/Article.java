@@ -19,6 +19,8 @@ import java.util.List;
 @NoArgsConstructor
 
 public class Article implements Serializable {
+
+    private static final long serialVersionUID = 6527581760602536749L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long articleId;

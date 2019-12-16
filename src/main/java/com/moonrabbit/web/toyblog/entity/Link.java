@@ -14,6 +14,8 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Link implements Serializable {
+
+    private static final long serialVersionUID = -3182305842035581880L;
     // serialVersionUID 用于反序列化时，即使类发生了改变也能正常进行。
     // Id 表示是主键
     @Id

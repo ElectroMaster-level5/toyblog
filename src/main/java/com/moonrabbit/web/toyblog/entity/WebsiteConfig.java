@@ -16,6 +16,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class WebsiteConfig implements Serializable {
 
+    private static final long serialVersionUID = 7934053649990825994L;
     @Id
     private Long Id;
 

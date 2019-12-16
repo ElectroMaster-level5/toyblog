@@ -14,6 +14,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class WebsiteAccess implements Serializable {
+    private static final long serialVersionUID = -1898615171198915333L;
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;

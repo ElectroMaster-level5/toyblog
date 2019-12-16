@@ -16,6 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Tag implements Serializable {
+    private static final long serialVersionUID = 537039292968002295L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long tagId;

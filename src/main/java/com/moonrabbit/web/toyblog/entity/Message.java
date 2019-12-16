@@ -14,6 +14,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Message implements Serializable {
+    private static final long serialVersionUID = -6775202020339261507L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long messageId;

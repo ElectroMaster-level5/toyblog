@@ -60,7 +60,7 @@
     <column id="COL15" populated="true" UUID="5098caa7-8bf2-4fa2-8ef8-dd4aa0433d12" autoIncrement="false" autoIncrementSequenceName="article_is_top_seq" defaultValue="" name="is_top" nullable="1" physicalName="is_top" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL16" populated="true" UUID="9e0e7a31-a523-452a-96b1-067d870a0971" autoIncrement="false" autoIncrementSequenceName="article_isEnable_seq" defaultValue="" name="isEnable" nullable="1" physicalName="isEnable" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL16" populated="true" UUID="9e0e7a31-a523-452a-96b1-067d870a0971" autoIncrement="false" autoIncrementSequenceName="article_is_enable_seq" defaultValue="" name="is_enable" nullable="1" physicalName="is_enable" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     </folder>
@@ -116,16 +116,109 @@
     </index>
    </folder>
   </table>
+  <table id="TAB29" populated="true" UUID="1ed817b7-6618-4ae8-b1fb-14dafc866455" name="message" objectType="TABLE" physicalName="message" >
+   <remarks></remarks>
+   <folder id="FOLTAB291" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL30" populated="true" UUID="449523cf-7f81-4ff1-9ffa-3613c2e7c0b9" autoIncrement="true" autoIncrementSequenceName="message_message_id_seq" defaultValue="" name="message_id" nullable="0" physicalName="message_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL31" populated="true" UUID="856fcd82-396a-4d8f-b6d9-6b295f9fe971" autoIncrement="false" autoIncrementSequenceName="message_email_seq" defaultValue="" name="email" nullable="1" physicalName="email" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>留言人邮箱</remarks>
+    </column>
+    <column id="COL32" populated="true" UUID="de60bfd1-f70d-44df-9ce5-292a606c31f3" autoIncrement="false" autoIncrementSequenceName="message_name_seq" defaultValue="" name="name" nullable="1" physicalName="name" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>留言人名称</remarks>
+    </column>
+    <column id="COL33" populated="true" UUID="b148ca87-5406-49e5-a7cc-8e47b41735a1" autoIncrement="false" autoIncrementSequenceName="message_subject_seq" defaultValue="" name="subject" nullable="1" physicalName="subject" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>留言主题</remarks>
+    </column>
+    <column id="COL34" populated="true" UUID="390b9e62-9e4d-4930-bc05-9564e09b30c1" autoIncrement="false" autoIncrementSequenceName="message_message_content_seq" defaultValue="" name="message_content" nullable="1" physicalName="message_content" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2005" userDefinedTypeUUID="9c22ed40-2868-4d9e-96ca-789234a53c8f" >
+     <remarks>留言内容</remarks>
+    </column>
+    <column id="COL35" populated="true" UUID="b92f7128-11f3-4468-a8a7-390a04c34307" autoIncrement="false" autoIncrementSequenceName="message_message_input_date_seq" defaultValue="" name="message_input_date" nullable="1" physicalName="message_input_date" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>留言日期</remarks>
+    </column>
+    <column id="COL36" populated="true" UUID="a0eeac58-43bd-439b-b26e-a14acf16213d" autoIncrement="false" autoIncrementSequenceName="message_is_read_seq" defaultValue="" name="is_read" nullable="1" physicalName="is_read" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>是否已读</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB293" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB292" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB294" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX37" populated="true" UUID="4a682178-9356-420a-8952-28864396d2eb" clustered="false" name="message_pk" physicalName="message_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC38" populated="true" UUID="17690cc4-8b8d-4eeb-93ea-04011dad054e" ascendingOrDescending="UNSPECIFIED" column-ref="COL30" name="message_id" physicalName="message_id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB39" populated="true" UUID="765d7f5d-9b1c-48fe-bd3f-addb1c4b58a6" name="website_access" objectType="TABLE" physicalName="website_access" >
+   <remarks></remarks>
+   <folder id="FOLTAB391" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL40" populated="true" UUID="57ab9eae-e45a-4b4c-a86c-49fc292b3944" autoIncrement="true" autoIncrementSequenceName="website_access_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL41" populated="true" UUID="97330be0-c9d5-48e1-886c-5eb50bd1702c" autoIncrement="false" autoIncrementSequenceName="website_access_access_date_seq" defaultValue="" name="access_date" nullable="1" physicalName="access_date" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>网页访问时间</remarks>
+    </column>
+    <column id="COL42" populated="true" UUID="305b7ced-13dc-4f50-a1fa-dc9291c0816a" autoIncrement="false" autoIncrementSequenceName="website_access_access_count_seq" defaultValue="" name="access_count" nullable="1" physicalName="access_count" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>网页当日访问次数</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB393" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB392" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB394" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX43" populated="true" UUID="44d8b044-daad-49fc-930f-51fafb0c0083" clustered="false" name="website_access_pk" physicalName="website_access_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC44" populated="true" UUID="53a92d78-3192-4ccb-9aa6-08d8d4613a48" ascendingOrDescending="UNSPECIFIED" column-ref="COL40" name="id" physicalName="id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB45" populated="true" UUID="b4a4350b-8a9e-434e-8289-651e16cb1d35" name="website_config" objectType="TABLE" physicalName="website_config" >
+   <remarks></remarks>
+   <folder id="FOLTAB451" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL46" populated="true" UUID="c5cf204a-35f6-48fb-b9c9-69a0bd45d560" autoIncrement="false" autoIncrementSequenceName="website_config_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL47" populated="true" UUID="40aabe96-d467-4d95-b169-826f9267f517" autoIncrement="false" autoIncrementSequenceName="website_config_blog_name_seq" defaultValue="" name="blog_name" nullable="1" physicalName="blog_name" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>博客名称</remarks>
+    </column>
+    <column id="COL48" populated="true" UUID="71ebc7c5-b2a9-47a1-b8ac-82f8f9b3f055" autoIncrement="false" autoIncrementSequenceName="website_config_author_name_seq" defaultValue="" name="author_name" nullable="1" physicalName="author_name" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>博客作者</remarks>
+    </column>
+    <column id="COL49" populated="true" UUID="f3e01dc9-0639-4e14-a8b6-67f71fff56a3" autoIncrement="false" autoIncrementSequenceName="website_config_about_page_article_id_seq" defaultValue="" name="about_page_article_id" nullable="1" physicalName="about_page_article_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>关于页的文章id</remarks>
+    </column>
+    <column id="COL50" populated="true" UUID="f55784ee-f9f7-4e69-a1a9-9ac27a74202a" autoIncrement="false" autoIncrementSequenceName="website_config_record_number_seq" defaultValue="" name="record_number" nullable="1" physicalName="record_number" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>备案号</remarks>
+    </column>
+    <column id="COL51" populated="true" UUID="82ff41af-5b17-48b2-959e-4a77004e0f55" autoIncrement="false" autoIncrementSequenceName="website_config_domain_name_seq" defaultValue="" name="domain_name" nullable="1" physicalName="domain_name" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>域名</remarks>
+    </column>
+    <column id="COL52" populated="true" UUID="80857dd8-fb45-41c4-8ac8-742bec83df76" autoIncrement="false" autoIncrementSequenceName="website_config_email_username_seq" defaultValue="" name="email_username" nullable="1" physicalName="email_username" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>博客作者邮箱</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB453" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB452" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB454" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX53" populated="true" UUID="f49652b8-5451-4507-a4a7-30892e767c09" clustered="false" name="website_config_pk" physicalName="website_config_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC54" populated="true" UUID="02042484-397c-4898-bc67-7a9d926497e5" ascendingOrDescending="UNSPECIFIED" column-ref="COL46" name="id" physicalName="id" />
+    </index>
+   </folder>
+  </table>
   <relationships>
-   <relationship id="REL29" populated="true" UUID="251adfec-cd3f-4337-87bb-beb643907695" deferrability="7" deleteRule="3" fk-table-ref="TAB25" fkCardinality="7" identifying="false" name="article_article_tag_fk" physicalName="article_article_tag_fk" pk-table-ref="TAB8" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP30" populated="true" UUID="60cb4991-0274-437f-b682-b99637329f0d" fk-column-ref="COL26" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL9" />
+   <relationship id="REL55" populated="true" UUID="251adfec-cd3f-4337-87bb-beb643907695" deferrability="7" deleteRule="3" fk-table-ref="TAB25" fkCardinality="7" identifying="false" name="article_article_tag_fk" physicalName="article_article_tag_fk" pk-table-ref="TAB8" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP56" populated="true" UUID="60cb4991-0274-437f-b682-b99637329f0d" fk-column-ref="COL26" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL9" />
    </relationship>
-   <relationship id="REL31" populated="true" UUID="cfd8b7e3-9755-45a7-b834-7755e785a908" deferrability="7" deleteRule="3" fk-table-ref="TAB25" fkCardinality="7" identifying="false" name="tag_article_tag_fk" physicalName="tag_article_tag_fk" pk-table-ref="TAB19" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP32" populated="true" UUID="82c4d5ec-6178-42b3-8001-5db8f21c5f90" fk-column-ref="COL27" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL20" />
+   <relationship id="REL57" populated="true" UUID="cfd8b7e3-9755-45a7-b834-7755e785a908" deferrability="7" deleteRule="3" fk-table-ref="TAB25" fkCardinality="7" identifying="false" name="tag_article_tag_fk" physicalName="tag_article_tag_fk" pk-table-ref="TAB19" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP58" populated="true" UUID="82c4d5ec-6178-42b3-8001-5db8f21c5f90" fk-column-ref="COL27" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL20" />
    </relationship>
   </relationships>
  </target-database>
- <ddl-generator type="ca.sqlpower.architect.ddl.MySqlDDLGenerator" allow-connection="false"> </ddl-generator>
+ <ddl-generator type="ca.sqlpower.architect.ddl.MySqlDDLGenerator" allow-connection="true"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
  <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
@@ -133,8 +226,11 @@
   <table-pane table-ref="TAB8" x="65" y="194" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB19" x="641" y="197" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB25" x="346" y="197" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-link relationship-ref="REL29" pkConnection="0.68" fkConnection="0.16666666666666666" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
-  <table-link relationship-ref="REL31" pkConnection="0.8266666666666667" fkConnection="0.16666666666666666" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-pane table-ref="TAB29" x="60" y="389" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB39" x="350" y="391" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB45" x="617" y="388" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL55" pkConnection="0.68" fkConnection="0.16666666666666666" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL57" pkConnection="0.8266666666666667" fkConnection="0.16666666666666666" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
  </play-pen>
  <critic-manager>
   <critic-grouping platformType="Generic" enabled="true">
