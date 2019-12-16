@@ -30,18 +30,33 @@ CREATE DATABASE toyBlog;
 
 ### 4. 效果展示
 - **首页：**
+
 <img src="./mkdown/imgs/localhost_8080_.png">
+
 - **博客页：**
+
 <img src="./mkdown/imgs/localhost_8080_blog.png">
+
 - **搜索页：**
+
 <img src="./mkdown/imgs/localhost_8080_search_keyword.png">
+
 - **关于页：**
+
 <img src="./mkdown/imgs/localhost_8080_about.png">
+
 - **联系页：**
+
 <img src="./mkdown/imgs/localhost_8080_contact.png">
+
 - **标签列表页：**
+
 <img src="./mkdown/imgs/localhost_8080_tag.png">
+
 - **标签对应博客页：**
+
 <img src="./mkdown/imgs/localhost_8080_tag_SpringBoot.png">
+
 - **文章详情页：**
+
 <img src="./mkdown/imgs/localhost_8080_article_5.png">
